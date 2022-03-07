@@ -63,4 +63,13 @@ export default {
       tokenExpiration: responseData.expiresIn,
     });
   },
+  //not need to send requests
+  //clear all data back to null
+  logout(context) {
+    context.commit('setUser', {
+      token: null,
+      userId: null,
+      tokenExpiration: null,
+    });
+  },
 };

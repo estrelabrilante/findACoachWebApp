@@ -42,13 +42,15 @@ export default {
     };
   },
   computed: {
+    //caption is changed
     submitButtonCaption() {
       if (this.mode === 'login') {
-        return 'Login';
+        return 'Log In';
       } else {
-        return 'Signup';
+        return 'Sign Up';
       }
     },
+
     switchModeButtonCaption() {
       if (this.mode === 'login') {
         return 'Signup instead';
@@ -73,7 +75,7 @@ export default {
       const actionPayload = { email: this.email, password: this.password };
 
       try {
-        //mode = sign in with email and password
+        //mode = sign in/ log in with email and password
         if (this.mode === 'login') {
           await this.$store.dispatch('login', actionPayload);
         }
@@ -90,6 +92,7 @@ export default {
 
       this.isLoading = false;
     },
+    // mode is changed
     switchAuthMode() {
       if (this.mode === 'login') {
         this.mode = 'signup';

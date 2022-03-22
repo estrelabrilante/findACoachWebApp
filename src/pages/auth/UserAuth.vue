@@ -42,7 +42,6 @@ export default {
     };
   },
   computed: {
-    //caption is changed
     submitButtonCaption() {
       if (this.mode === 'login') {
         return 'Log In';
@@ -50,7 +49,7 @@ export default {
         return 'Sign Up';
       }
     },
-
+    //caption is changed
     switchModeButtonCaption() {
       if (this.mode === 'login') {
         return 'Signup instead';
